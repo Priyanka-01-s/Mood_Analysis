@@ -23,8 +23,10 @@ public class MoodAnalysis {
 
     public String happySadAnalysis(){
         try{
-
-            if(message.toLowerCase().contains("happy")){
+            if (message == null) {
+                return "Happy"; 
+            }// Return "Happy" for null mood
+            else if(message.toLowerCase().contains("happy")){
                 return "HAPPY";
             }else if(message.toLowerCase().contains("sad")){
                 return "SAD";

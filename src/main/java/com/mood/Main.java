@@ -11,13 +11,18 @@ public class Main {
         MoodAnalysis moodAnalysis2 = new MoodAnalysis(message2);
         String result2 = moodAnalysis2.happySadAnalysis();
 
-        String message3 = "I am feeling nothing!";
+        String message3 = "I have a null mood!";
         MoodAnalysis moodAnalysis3 = new MoodAnalysis(message3);
         String result3 = moodAnalysis3.happySadAnalysis();
-        System.out.println(result);
-        System.out.println(result2);
-        System.out.println(result3);
 
+        String message4 = null;
+        MoodAnalysis moodAnalysis4 = new MoodAnalysis(message4);
+        String result4 = moodAnalysis4.happySadAnalysis();
+
+        System.out.println("Result 2: " +result);
+        System.out.println("Result 2: " +result2);
+        System.out.println("Result 2: " +result3);
+        System.out.println("Result 4: " + result4);
 
     }
 }
