@@ -4,7 +4,20 @@ public class MoodAnalysis {
 
     private String message;
 
+    public MoodAnalysis() {
+        this.message = "";
+    }
+
     public MoodAnalysis(String message){
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    // Setter for message field
+    public void setMessage(String message) {
         this.message = message;
     }
 

@@ -9,12 +9,16 @@ public class MoodAnalysisTest {
     public void testAnalysis(){
 
         String message = "I am in a happy mood.";
-
         MoodAnalysis moodAnalysis = new MoodAnalysis(message);
-
         String result = moodAnalysis.happySadAnalysis();
-
         assertEquals("HAPPY", result);
     }
     
+    @Test
+    public void testSadAnalysis() {
+        String message = "I am in a sad mood.";
+        MoodAnalysis moodAnalysis = new MoodAnalysis(message);
+        String result = moodAnalysis.happySadAnalysis();
+        assertEquals("SAD", result);
+    }
 }
