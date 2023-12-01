@@ -21,21 +21,21 @@ public class MoodAnalysis {
         this.message = message;
     }
 
-    public String happySadAnalysis(){
+    public String happySadAnalysis() throws MoodAnalysisException{
         try{
             if (message == null) {
-                return "Happy"; 
-            }// Return "Happy" for null mood
+                throw new MoodAnalysisException(MoodAnalysisError.EMPTY_MOOD); 
+            }
             else if(message.toLowerCase().contains("happy")){
-                return "HAPPY";
+                return Mood.HAPPY.toString();
             }else if(message.toLowerCase().contains("sad")){
-                return "SAD";
+                return Mood.SAD.toString();
             }else{
                 throw new MoodAnalysisException(MoodAnalysisError.INVALID_MOOD);
             }
 
         }catch(MoodAnalysisException e){
-            return e.getMessage();
+            throw e;
 
         }
     }

@@ -1,7 +1,7 @@
 package com.mood;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MoodAnalysisException {
         System.out.println("-----WELCOME TO MOOD ANALYSER-------\n");
         String message = "I am feeling happy!";
         MoodAnalysis moodAnalysis = new MoodAnalysis(message);
