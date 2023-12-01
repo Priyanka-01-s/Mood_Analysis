@@ -31,13 +31,18 @@ public class MoodAnalysis {
             }else if(message.toLowerCase().contains("sad")){
                 return "SAD";
             }else{
-                throw new MoodAnalysisException("Can't analyse the current mood");
+                throw new MoodAnalysisException(MoodAnalysisError.INVALID_MOOD);
             }
 
         }catch(MoodAnalysisException e){
             return e.getMessage();
 
         }
+    }
+
+    public enum Mood{
+        HAPPY,
+        SAD
     }
    
 }

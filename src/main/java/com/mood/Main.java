@@ -11,7 +11,7 @@ public class Main {
         MoodAnalysis moodAnalysis2 = new MoodAnalysis(message2);
         String result2 = moodAnalysis2.happySadAnalysis();
 
-        String message3 = "I have a null mood!";
+        String message3 = "I have a neutral mood today!";
         MoodAnalysis moodAnalysis3 = new MoodAnalysis(message3);
         String result3 = moodAnalysis3.happySadAnalysis();
 
