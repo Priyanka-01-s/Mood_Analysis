@@ -8,13 +8,13 @@ public class MoodAnalysisTest {
     @Test
     public void testAnalysis(){
 
-        String message = "I am in a sad mood.";
+        String message = "I am in a happy mood.";
 
         MoodAnalysis moodAnalysis = new MoodAnalysis(message);
 
         String result = moodAnalysis.happySadAnalysis();
 
-        assertEquals("SAD", result);
+        assertEquals("HAPPY", result);
     }
     
 }
