@@ -51,6 +51,23 @@ public class MoodAnalysisTest {
             moodAnalysis.happySadAnalysis();
         });
         assertEquals(MoodAnalysisError.EMPTY_MOOD, exception.getError());
-    assertEquals("Mood should not be empty or null", exception.getMessage());
+        assertEquals("Mood should not be empty or null", exception.getMessage());
     }
+
+    @Test
+    public void testEmptyMood() {
+        String message = "";  // Empty mood
+        MoodAnalysis moodAnalysis = new MoodAnalysis(message);
+
+        MoodAnalysisException exception = assertThrows(MoodAnalysisException.class, () -> {
+            moodAnalysis.happySadAnalysis();
+        });
+
+        assertEquals(MoodAnalysisError.EMPTY_MOOD, exception.getError());
+        assertEquals("Mood should not be empty or null", exception.getMessage());
+    }
+
+    
 }
+
+

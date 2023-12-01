@@ -23,7 +23,7 @@ public class MoodAnalysis {
 
     public String happySadAnalysis() throws MoodAnalysisException{
         try{
-            if (message == null) {
+            if (message == null || message.trim().isEmpty()) {
                 throw new MoodAnalysisException(MoodAnalysisError.EMPTY_MOOD); 
             }
             else if(message.toLowerCase().contains("happy")){

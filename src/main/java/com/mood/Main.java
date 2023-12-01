@@ -19,10 +19,15 @@ public class Main {
         MoodAnalysis moodAnalysis4 = new MoodAnalysis(message4);
         String result4 = moodAnalysis4.happySadAnalysis();
 
-        System.out.println("Result 2: " +result);
-        System.out.println("Result 2: " +result2);
-        System.out.println("Result 2: " +result3);
-        System.out.println("Result 4: " + result4);
+        String message5 = "";  // Empty mood
+        MoodAnalysis moodAnalysis5 = new MoodAnalysis(message5);
+        String result5 = moodAnalysis5.happySadAnalysis();
 
+        System.out.println("Result 1 (Happy Mood): " + result);
+        System.out.println("\nResult 2 (Sad Mood): " + result2);
+        System.out.println("Result 3 (Neutral Mood): " + result3);
+        System.out.println("Result 4 (Null Mood): " + result4);
+        System.out.println("Result 5 (Empty Mood): " + result5);
     }
+
 }
