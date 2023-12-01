@@ -12,9 +12,9 @@ public class MoodAnalysis {
         try{
 
             if(message.toLowerCase().contains("happy")){
-                return "HAPPY MOOD !!";
+                return "HAPPY";
             }else if(message.toLowerCase().contains("sad")){
-                return "SAD MOOD !!";
+                return "SAD";
             }else{
                 throw new MoodAnalysisException("Can't analyse the current mood");
             }
