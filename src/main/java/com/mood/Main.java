@@ -10,8 +10,14 @@ public class Main {
         String message2 = "I am feeling sad!";
         MoodAnalysis moodAnalysis2 = new MoodAnalysis(message2);
         String result2 = moodAnalysis2.happySadAnalysis();
+
+        String message3 = "I am feeling nothing!";
+        MoodAnalysis moodAnalysis3 = new MoodAnalysis(message3);
+        String result3 = moodAnalysis3.happySadAnalysis();
         System.out.println(result);
         System.out.println(result2);
+        System.out.println(result3);
+
 
     }
 }
